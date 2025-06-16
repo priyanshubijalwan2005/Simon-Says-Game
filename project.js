@@ -113,3 +113,4 @@ function displayHighestScore() {
     }
     highestScoreElement.innerText = `Highest Score: ${highestScore}`;
 }
+displayHighestScore();
