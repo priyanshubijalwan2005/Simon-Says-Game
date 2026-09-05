@@ -1,24 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simon Says</title>
-    <link rel="stylesheet" href="project.css">
-</head>
-<body>
-    <h1>Simon Says</h1>
-    <h2>Press any key to start the game</h2>
-    <div class="btn-container">
-        <div class="line-one">
-            <div class="btn red" type = "button" id="red"></div>
-            <div class="btn yellow" type = "button" id="yellow"></div>
-        </div>
-        <div class="line-two">
-            <div class="btn green" type = "button" id="green"></div>
-            <div class="btn blue" type = "button" id="blue"></div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Says Pro | Memory Game</title>
+
+    <link rel="stylesheet" href="project.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background">
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+      <div class="orb orb-three"></div>
     </div>
+
+    <main class="game-wrapper">
+      <section class="game-header">
+        <div class="logo">
+          <span class="logo-icon">⚡</span>
+          <h1>Simon <span>Says Pro</span></h1>
+        </div>
+        <p class="subtitle">Test your memory. Beat your limits.</p>
+      </section>
+
+      <section class="difficulty-section">
+        <p>SELECT DIFFICULTY</p>
+        <div class="difficulty-buttons">
+          <button class="difficulty-btn active" data-mode="easy">
+            🟢 Easy
+          </button>
+          <button class="difficulty-btn" data-mode="medium">🟡 Medium</button>
+          <button class="difficulty-btn" data-mode="hard">🔴 Hard</button>
+        </div>
+      </section>
+
+      <section class="score-board">
+        <div class="score-card">
+          <span class="score-label">LEVEL</span>
+          <span id="level">0</span>
+        </div>
+
+        <div class="score-card">
+          <span class="score-label">TIME</span>
+          <span id="timer">0</span>
+        </div>
+
+        <div class="score-card">
+          <span class="score-label">HIGH SCORE</span>
+          <span id="highest-score">0</span>
+        </div>
+      </section>
+
+      <section class="game-card">
+        <h2 id="game-status">Press Start to Begin</h2>
+
+        <div class="btn-container">
+          <div class="game-row">
+            <button class="btn red" id="red" aria-label="Red button"></button>
+            <button
+              class="btn yellow"
+              id="yellow"
+              aria-label="Yellow button"
+            ></button>
+          </div>
+          <div class="game-row">
+            <button
+              class="btn green"
+              id="green"
+              aria-label="Green button"
+            ></button>
+            <button
+              class="btn blue"
+              id="blue"
+              aria-label="Blue button"
+            ></button>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="start-btn" class="control-btn start-btn">
+            ▶ Start Game
+          </button>
+          <button id="pause-btn" class="control-btn pause-btn">⏸ Pause</button>
+          <button id="restart-btn" class="control-btn restart-btn">
+            ↻ Restart
+          </button>
+        </div>
+
+        <button id="sound-btn" class="sound-btn">🔊 Sound ON</button>
+        <p class="keyboard-text">You can also press any key to start</p>
+      </section>
+
+      <section class="instructions">
+        <h3>How to Play</h3>
+        <div class="instruction-items">
+          <div class="instruction"><span>1</span> Watch the sequence</div>
+          <div class="instruction"><span>2</span> Remember the pattern</div>
+          <div class="instruction"><span>3</span> Repeat it correctly</div>
+        </div>
+      </section>
+
+      <section class="achievements">
+        <h3>🏆 Achievements</h3>
+        <div class="achievement-grid">
+          <div class="achievement locked" id="achievement-5">
+            <span class="achievement-icon">🎯</span>
+            <div>
+              <h4>Getting Started</h4>
+              <p>Reach Level 5</p>
+            </div>
+          </div>
+
+          <div class="achievement locked" id="achievement-10">
+            <span class="achievement-icon">🧠</span>
+            <div>
+              <h4>Memory Master</h4>
+              <p>Reach Level 10</p>
+            </div>
+          </div>
+
+          <div class="achievement locked" id="achievement-20">
+            <span class="achievement-icon">👑</span>
+            <div>
+              <h4>Simon Legend</h4>
+              <p>Reach Level 20</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <script src="project.js"></script>
-</body>
+    <div class="watermark">
+      <span class="watermark-dot"></span>
+      Designed by <strong>Priyanshu</strong>
+    </div>
+  </body>
 </html>
